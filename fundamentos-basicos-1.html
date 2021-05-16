@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function hastadoscientoscincuentaycinco(){ /*hasta doscientos cincuenta y cinco*/
+            let x = [];
+            for (let i=0; i<=255; i++){
+                x.push(i);
+            }
+            console.log(x);
+        }
+        hastadoscientoscincuentaycinco()
+
+        function oddnumberstilthousandsum() {/*pares hasta mil*/
+            let x = 0;
+            for(let i=1;  i<= 1000; i++){
+                if( i % 2 == 0){
+                    x = x + i;
+                }
+            }
+            console.log(x);
+        }
+        oddnumberstilthousandsum()
+
+        function evennumberstilfivethousandsum() { /*pares hasta 5000*/
+            let x= 0;
+            for(let i=1; i<=5000; i++){
+                if( i % 2 == 1){
+                    x = x + i;
+                }
+            }
+            console.log(x);
+        }
+
+        function sumarray (arr){
+            let x=0;
+            for(let i=0; i<=arr.length-1; i++){
+                x = x + arr[i];
+            }
+            console.log(x);
+            return x;
+        }
+
+        function encuentraelmax(arr) {
+            let max=0;
+            for(let i=0; i<=arr.length-1; i++){
+                if( max < arr[i]){
+                    max = arr[i];
+                }
+            }
+            console.log(max);
+            return max;
+        }
+
+        function encuentraelavg(arr) {
+            let num=0;
+            let avg =0;
+            for(let i=0; i<=arr.length-1; i++){
+                num= num + arr[i]
+            }
+            avg= num/arr.length;
+            console.log(avg);
+            return avg;
+        }
+
+        function arrayimpares(arr) {
+            let arrimp = [];
+            for(let i=0; i<arr.length; i++) {
+                if( arr[i]%2==1){
+                    arrimp.push(arr[i]);
+                }
+            }
+            console.log(arrimp);
+        }
+
+        function mayorqy(y, arr) {
+            let cantmay= 0;
+            for(let i=0; i<arr.length; i++){
+                if( y < arr[i]){
+                    cantmay= cantmay + 1;
+                }
+            }
+            console.log(cantmay);
+        }
+
+        function cuadrados(arr) {
+            let arrnew= [];
+            let num= 0;
+            for(let i=0; i<arr.length; i++){
+                arrnew.push(arr[i]*arr[i]);
+            }
+            console.log(arrnew);
+        }
+
+        function replaceneg(arr) {
+            let num= 0;
+            for(let i=0; i<arr.length; i++){
+                if( arr[i]<0){
+                    arr[i]= 0;
+                }
+            }
+            console.log(arr);
+        }
+
+        function maxminavg(arr){
+        let max=0;
+        let min=0;
+        let avg=0;
+        let arrnew=[0,0,0];
+
+            for(let i=0; i<arr.length; i++){
+                if(arr[i+1]<arr[i]){    
+                    let temp= arr[i];
+                    arr[i]= arr[i+1];
+                    arr[i+1]= temp;
+                    avg= avg + temp;
+                }
+            }
+            max= arr[(arr.length)-1];
+            min= arr[0];	
+            arrnew[0]= max;
+            arrnew[1]= min;
+            arrnew[2]= avg/(arr.length);
+            console.log(arrnew);
+            return arrnew;
+        }
+
+        function interprimultim(arr) {
+            var temp= arr[0];
+            arr[0]= arr[arr.length-1];
+            arr[arr.length-1]= temp;
+        console.log(arr);
+        }
+
+        function negtostring(arr) {
+            let num= 0;
+            for(let i=0; i<arr.length; i++){
+                if( arr[i]<0){
+                    arr[i]= "Dojo";
+                }
+            }
+            console.log(arr);
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
