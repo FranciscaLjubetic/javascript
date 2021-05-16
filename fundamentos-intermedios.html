@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Intermedios</title>
+</head>
+<body>
+    <script>
+        function sigma(a){/*devuelve la suma de todos los enteros positivos iguales o menores que un numero*/
+            let sum = 0;
+            for(let i=0; i<=a; i++){
+                sum=sum+i;
+                }
+            console.log(sum)
+            return sum;
+        }
+
+        function factorial(a){/*devuelve la multiplicacion de todos los enteros positivos iguales o menores que un numero*/
+            let fac = 1;
+            for(let i=1; i<=a; i++){
+                fac=fac*i;
+                }
+            console.log(fac)
+            return fac;
+        }
+
+        function fibonacci(a){/*devuelve la suma los dos numeros anteriores con un par de parches NO FUNCIONA*/
+            fibonacci(0)=0;
+            fibonacci(1)=1;
+            for(let i=2; i<=a; i++){
+            fibonacci(i)=fibonacci(i-1) + fibonacci(i-2);
+            }
+            console.log(fibonacci(a));
+            return fibonacci(a);
+        }
+
+        function penultimo(arr){/*devuelve el penultimo elemento del aray y sies muy pequeño, null*/
+            if(arr.length<2){
+                return null;
+            }
+            return arr[arr.length-2];
+        }
+
+        function nultimo(arr,a){/*devuelve el Nultimo elemento del aray y sies muy pequeño, null*/
+            if(arr.length<2){
+                return null;
+            }
+            console.log(arr[arr.length-(a+1)]);
+            return arr[arr.length-(a+1)];
+        }
+
+        function encuentraelsegundomomax(arr) { /*encuentra el segundo maximo dentro de un array*/
+            let arrnew= arr.sort( function( a, b ) { return a < b ? -1 : 1; } );/*Esto es trampa, pero es rapido*/
+            console.log(arrnew[arrnew.length-2]);
+            return arrnew[arrnew.length-2];
+            /*asi seria sin hacer trampa:
+            let max=0;
+            let max2=0;
+            for(let i=0; i<=arr.length-1; i++){
+                if( max < arr[i]){
+                    max = arr[i];
+                }
+            }
+            arr.pop(max);
+            for(let i=0; i<=arr.length-1; i++){
+                if( max2 < arr[i]){
+                    max2 = arr[i];
+                }
+            }
+
+            console.log(max2);
+            return max2;*/
+        }
+
+        function dobleproblemapar(arr){/*devuelve un arreglo en donde todos los elementos del arreglo original estan duplicados, en orden si poh*/
+            let arrnew = [];
+            /*for(let i=0; i<arr.length; i++){
+                arrnew[i]=[arr[i],arr[i]];
+                }
+            ESTO SERIA SI CONSTRUYERAMOS MINI ARREGLOS DE DOS */
+            let arrnew = [];
+            for(let i=0; i<arr.length; i++){
+                arrnew[(2*i-1)]=arr[i];
+                arrnew[2*i]=arr[i];
+                }
+            console.log(arrnew)
+            return arrnew;
+        }
+
+
+    </script>
+</body>
+</html>
