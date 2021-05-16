@@ -8,7 +8,155 @@
 </head>
 <body>
     <script>
+        function postostring(arr) { /*reemplaza todos los positivos de un array por la palabra big*/
+            let num= 0;
+            for(let i=0; i<arr.length; i++){
+                if( arr[i]>0){
+                    arr[i]= "Big";
+                }
+            }
+            console.log(arr);
+        }
+
+        function impmenoretmayor(arr){/*imprime el valor minimo y devuelve el valor maximo de un array*/
+            let arrnew= arr.sort( function( a, b ) { return a < b ? -1 : 1; } );
+            console.log(arrnew[0]);
+            return arrnew.length-1;
+        }
+
+        function impenretul(arr) { /*imprime el penultimo valor y retorna el ultimo, de un array*/
+            console.log(arr[arr.length-2]);
+            return arr[arr.length-1];
+        }
+
+        function dobles(arr){/*devuelve un nuevo array cuyos valores son los dobles del original*/
+            let arrnew= [];
+            for(let i=0; i<arr.length; i++){
+                arrnew[i]= 2*(arr[i]);/*arrnew.push(2*(arr[i]))*/
+                }
+            console.log(arrnew);
+            return arrnew;
+        }
+
+        function contarpositivos(arr){/*cuenta los positivos de un array y sustituye el ultimo valor por esa suma*/
+            let posis= 0;
+            let arrnew= arr.sort( function( a, b ) { return a < b ? -1 : 1; } );
+            for(let i=0; i<arr.length; i++){
+                if(arrnew[i]>=0){
+                    posis = posis + 1;
+                }
+                else{
+                posis= posis;
+                }
+            }
+            arr[arr.length-1]= posis
+            console.log(arr);
+            return arr;
+        }
+
+        function impracialparabien(arr){/*cada vez que un array tenga 3 valores consecutivos impares, imprime ¡Qué imparcial!, si tiene 3 valore consecutivos pares,¡Es para bien! */
+            for(let i=0; i<arr.length; i++){
+                if(arr[i]%2 == 1 && arr[i+1]%2 == 1 && arr[i+2]%2 == 1){
+                    console.log("¡Qué imparcial!");
+                }
+                if (arr[i]%2 == 0 && arr[i+1]%2 == 0 && arr[i +2]%2 == 0){ /*puede explocar el else if*/
+                    console.log("¡Es para bien!");
+                }
+            }
+        }
+
+        function incrementalossegundos(arr){/*incrementa en 1 a todos los numeros que le siguen al indicado?, si es que son de indice impar y los imprime */
+            for(let i=0; i<arr.length; i++){
+                if(i % 2 == 1 ){
+                    arr[i] = arr[i] + 1;
+                }
+                console.log(arr[i]);
+            }
+            return arr;
+        }
+
+        function cantletrasporitem(arr){/*devuelve un nuevo array compuesto por los numeros de la cantidad de letras de cada string del array original */
+            let arrnew=[];
+            for(let i=0; i<arr.length; i++){
+                /*String(arr[i]);
+                let %#&%&= arr[i].toString;
+                arr[i].trim();
+                arr[i].replaceAll(" ", ""); TENGO QUE PREGUNTAR COMO SE HACE COMPLETO*/
+                arrnew[i]= arr[i].length;
+            }
+            console.log(arrnew);
+            return arrnew;
+        }
+
+        function massiete(arr){/*devuelve un nuevo array en el que se ha sumado 7a cada valor del array original*/
+            let arrnew= [];
+            for(let i=0; i<arr.length; i++){
+                arrnew[i]= arr[i] +7;/*arrnew.push(2*(arr[i]))*/
+                }
+            console.log(arrnew);
+            return arrnew;
+        }
+        function arrayinverso(arr){/*le cambia los valores al array de manera "anagramica"*/
+        for(let i=0; i<arr.length; i++){
+            if(i <= (arr.length/2)){ 
+                let temp= arr[i]   
+                arr[i]= arr[arr.length-(1+i)];
+                arr[arr.length-(1+i)]= temp;
+                }
+            }
+                
+            console.log(arr);
+            return arr;
+        }
+
+        function perspectivanegativa(arr){/*devuelve todos los valores en negativo, incluso los negativos. IGUAL QUE FRANCISCA*/
+        let arrnew= [];
+        for(let i=0; i<arr.length; i++){
+            if(arr[i] > 0){ 
+                arrnew[i] = -1*arr[i];
+                }
+            else{
+            arrnew[i] = arr[i];
+            }
+            }   
+            console.log(arrnew);
+            return arrnew;
+        }
+
+        function siemprehanbriento(arr){/*cada vez que un valor sea igual a "comida"  imprime "yummy", si eso no ocurre, imprime "tengo hambre"*/
+        let nohaycomida= 0;
+            for(let i=0; i<arr.length; i++){
+                    if(arr[i] == "comida"){ 
+                    console.log("yummy");
+                    nohaycomida= nohaycomida + 1;
+                    }
+                } 
+            if(nohaycomida == 0){
+            console.log("tengo hambre");
+            }
+        }
         
+        function cambiarhaciaelcentro(arr){/*si entendí bien, le cambia los valores al array de manera "anagramica", pero se salta pues cambia solo los i pares*/
+        for(let i=0; i<arr.length; i++){
+            if(i <= (arr.length/2) && i%2==0){ 
+                let temp= arr[i]   
+                arr[i]= arr[arr.length-(1+i)];
+                arr[arr.length-(1+i)]= temp;
+                }
+            }
+                
+            console.log(arr);
+        }
+
+        function escala(arr, a){/*multiplica los valores de un array por el numero b*/
+            for(let i=0; i<arr.length; i++){
+                arr[i]= a*(arr[i]);
+                }
+            console.log(arr);
+            return arr;
+        }
+
+
     </script>
 </body>
 </html>

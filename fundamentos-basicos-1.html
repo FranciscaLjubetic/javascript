@@ -38,7 +38,7 @@
             console.log(x);
         }
 
-        function sumarray (arr){
+        function sumarray (arr){/*suma items de un array*/
             let x=0;
             for(let i=0; i<=arr.length-1; i++){
                 x = x + arr[i];
@@ -47,7 +47,7 @@
             return x;
         }
 
-        function encuentraelmax(arr) {
+        function encuentraelmax(arr) { /*encuentra el maximo dentro de un array*/
             let max=0;
             for(let i=0; i<=arr.length-1; i++){
                 if( max < arr[i]){
@@ -58,7 +58,7 @@
             return max;
         }
 
-        function encuentraelavg(arr) {
+        function encuentraelavg(arr) {/*encuentra el promedio de un array*/
             let num=0;
             let avg =0;
             for(let i=0; i<=arr.length-1; i++){
@@ -69,7 +69,7 @@
             return avg;
         }
 
-        function arrayimpares(arr) {
+        function arrayimpares(arr) {/*encuentra losimpares de un array*/
             let arrimp = [];
             for(let i=0; i<arr.length; i++) {
                 if( arr[i]%2==1){
@@ -79,7 +79,7 @@
             console.log(arrimp);
         }
 
-        function mayorqy(y, arr) {
+        function mayorqy(y, arr) {/*encuentra los items mayores que y de un array*/
             let cantmay= 0;
             for(let i=0; i<arr.length; i++){
                 if( y < arr[i]){
@@ -89,7 +89,7 @@
             console.log(cantmay);
         }
 
-        function cuadrados(arr) {
+        function cuadrados(arr) {/*devuelve un nuevo array con todos los cuadrados de los valores de un array*/
             let arrnew= [];
             let num= 0;
             for(let i=0; i<arr.length; i++){
@@ -98,7 +98,7 @@
             console.log(arrnew);
         }
 
-        function replaceneg(arr) {
+        function replaceneg(arr) { /*reemplaza todos los negativos de un array por 0*/
             let num= 0;
             for(let i=0; i<arr.length; i++){
                 if( arr[i]<0){
@@ -108,12 +108,11 @@
             console.log(arr);
         }
 
-        function maxminavg(arr){
-        let max=0;
+        function maxminavg(arr){/*devuelve un nuevo array con el valor minimo, maximo y promedio del array original*/
+        let max=0; 
         let min=0;
         let avg=0;
-        let arrnew=[0,0,0];
-
+        let arrnew=[];
             for(let i=0; i<arr.length; i++){
                 if(arr[i+1]<arr[i]){    
                     let temp= arr[i];
@@ -131,14 +130,14 @@
             return arrnew;
         }
 
-        function interprimultim(arr) {
+        function interprimultim(arr) { /*intercambia el valor ultimo y el primero en un array*/
             var temp= arr[0];
             arr[0]= arr[arr.length-1];
             arr[arr.length-1]= temp;
         console.log(arr);
         }
 
-        function negtostring(arr) {
+        function negtostring(arr) { /*reemplaza todos los negativos de un array por la palabra dojo*/
             let num= 0;
             for(let i=0; i<arr.length; i++){
                 if( arr[i]<0){
