@@ -27,16 +27,20 @@
         }
 
         function fibonacci(a){/*devuelve la suma los dos numeros anteriores con un par de parches NO FUNCIONA*/
-            fibonacci(0)=0;
-            fibonacci(1)=1;
+            let arr=[];
+            arr[0]=0;
+            arr[1]=1;
+
             for(let i=2; i<=a; i++){
-            fibonacci(i)=fibonacci(i-1) + fibonacci(i-2);
+            arr[i]= arr[i-1] + arr[i-2];
             }
-            console.log(fibonacci(a));
-            return fibonacci(a);
+            console.log(arr[a]);
+            return arr[a];
         }
 
-        function penultimo(arr){/*devuelve el penultimo elemento del aray y sies muy pequeño, null*/
+fibonacci(5)
+
+        function penultimo(arr){/*devuelve el penultimo elemento del aray y si es muy pequeño, null*/
             if(arr.length<2){
                 return null;
             }
@@ -82,8 +86,7 @@
             ESTO SERIA SI CONSTRUYERAMOS MINI ARREGLOS DE DOS */
             let arrnew = [];
             for(let i=0; i<arr.length; i++){
-                arrnew[(2*i-1)]=arr[i];
-                arrnew[2*i]=arr[i];
+                arrnew[(2*i-1)] = arrnew[2*i]=arr[i];
                 }
             console.log(arrnew)
             return arrnew;
