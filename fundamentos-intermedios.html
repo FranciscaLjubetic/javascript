@@ -26,7 +26,7 @@
             return fac;
         }
 
-        function fibonacci(a){/*devuelve la suma los dos numeros anteriores con un par de parches NO FUNCIONA*/
+        function fibonacci(a){/*devuelve el fibonacci NO FUNCIONA*/
             let arr=[];
             arr[0]=0;
             arr[1]=1;
@@ -91,6 +91,14 @@ fibonacci(5)
             console.log(arrnew)
             return arrnew;
         }
+
+        function fibonacci(n){/*RECURSIVO devuelve la suma los dos numeros anteriores con un par de parches NO FUNCIONA*/
+            if(n==0 || n==1){
+                return n;
+            }    
+            return fibonacci(n-2)+ fibonacci(n-1);
+        }
+        console.log(fibonacci(8))
 
 
     </script>
